@@ -14,10 +14,10 @@ addons:
       - libc6-dev
       - libc6-dev-i386
       - g++-multilib
-      - clang-3.6
+      - clang-3.5
 install:
   - pip install --upgrade --user xlsxwriter pycrypto
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CXX=/usr/bin/clang++-3.6; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CC=/usr/bin/clang-3.6; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CXX=/usr/bin/clang++-3.5; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CC=/usr/bin/clang-3.5; fi
 script:
   - ./build.sh
